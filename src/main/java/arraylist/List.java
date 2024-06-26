@@ -1,6 +1,6 @@
 package arraylist;
 
-public class List {
+public class List implements iList {
     private int size;
     private Object[] list;
 
@@ -15,6 +15,7 @@ public class List {
         }
         return list[index];
     }
+    @Override
     public void add(int index, Object value) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("Index " + index + " out of bounds for length " + size);
@@ -24,9 +25,9 @@ public class List {
         }
         list[index] = value;
         size++;
-        System.out.println(list[index]);
     }
-    public Object remove(int index) {
+    @Override
+    public void remove(int index) {
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("Index " + index + " is out of bounds");
         }
@@ -37,7 +38,6 @@ public class List {
             }
         }
         size--;
-        return temp;
     }
     public void resize() {
         int newSize = (int) ((size * 1.5) + 1);
@@ -50,6 +50,5 @@ public class List {
     public int size() {
         return size;
     }
-
 
 }
