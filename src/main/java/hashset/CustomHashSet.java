@@ -1,6 +1,7 @@
 package hashset;
 
 
+@SuppressWarnings("unchecked")
 public class CustomHashSet<T> implements ISet<T> {
     private T[] buckets;
     private int size;
@@ -51,9 +52,7 @@ public class CustomHashSet<T> implements ISet<T> {
     private void resize() {
         int newSize = (int) ((size * 1.5) + 1);
         T[] newBuckets = (T[]) new Object[newSize];
-        for (int i = 0; i < size; i++) {
-            newBuckets[i] = buckets[i];
-        }
+        if (size >= 0) System.arraycopy(buckets, 0, newBuckets, 0, size);
         buckets = newBuckets;
     }
 
