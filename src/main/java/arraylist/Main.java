@@ -16,7 +16,7 @@ public class Main {
         list.add(9, "ggg");
         list.add(10, "ggg");
         System.out.println(list.get(4));
-        System.out.println(list.remove(10));
+        list.remove(10);
         System.out.println(list.size());
 
 
