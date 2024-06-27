@@ -1,9 +1,9 @@
-package arraylist;
+package andersen.lesson.arraylist;
 
 
 public class Main {
     public static void main(String[] args) {
-        List list = new List();
+        andersen.lesson.arraylist.List list = new List();
         list.add(0, "ggb");
         list.add(1, "ydg");
         list.add(2, "gn");

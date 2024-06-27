@@ -1,4 +1,4 @@
-package hashset;
+package andersen.lesson.hashset;
 
 public class Main {
     public static void main(String[] args) {

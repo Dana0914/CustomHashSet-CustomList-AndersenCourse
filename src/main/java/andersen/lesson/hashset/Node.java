@@ -1,4 +1,4 @@
-package hashset;
+package andersen.lesson.hashset;
 
 public class Node<T> {
     T data;

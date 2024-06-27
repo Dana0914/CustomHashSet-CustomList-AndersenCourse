@@ -1,4 +1,4 @@
-package arraylist;
+package andersen.lesson.arraylist;
 
 public class List implements iList {
     private int size;

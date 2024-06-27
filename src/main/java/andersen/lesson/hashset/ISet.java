@@ -1,4 +1,4 @@
-package hashset;
+package andersen.lesson.hashset;
 
 public interface ISet<T> {
     boolean add(T element);
