@@ -1,9 +1,11 @@
-package andersen.lesson.arraylist;
+package andersen.lesson.main;
 
+import andersen.lesson.arraylist.List;
+import andersen.lesson.hashset.CustomHashSet;
 
 public class Main {
     public static void main(String[] args) {
-        andersen.lesson.arraylist.List list = new List();
+        List list = new List();
         list.add(0, "ggb");
         list.add(1, "ydg");
         list.add(2, "gn");
@@ -19,8 +21,11 @@ public class Main {
         list.remove(10);
         System.out.println(list.size());
 
-
-
-
+        CustomHashSet<String> set = new CustomHashSet<>();
+        System.out.println(set.add("A"));
+        System.out.println(set.add("B"));
+        System.out.println(set.add("A"));
+        set.remove("A");
+        System.out.println(set.contains("A"));
     }
 }
