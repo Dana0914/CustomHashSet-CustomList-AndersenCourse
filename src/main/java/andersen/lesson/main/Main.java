@@ -1,5 +1,7 @@
-package arraylist;
+package andersen.lesson.main;
 
+import andersen.lesson.arraylist.List;
+import andersen.lesson.hashset.CustomHashSet;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,11 +18,14 @@ public class Main {
         list.add(9, "ggg");
         list.add(10, "ggg");
         System.out.println(list.get(4));
-        System.out.println(list.remove(10));
+        list.remove(10);
         System.out.println(list.size());
 
-
-
-
+        CustomHashSet<String> set = new CustomHashSet<>();
+        System.out.println(set.add("A"));
+        System.out.println(set.add("B"));
+        System.out.println(set.add("A"));
+        set.remove("A");
+        System.out.println(set.contains("A"));
     }
 }
